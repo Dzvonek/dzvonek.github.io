@@ -1,0 +1,388 @@
+
+* {
+	font-family: Cuprum;
+}
+
+/* показывает и убирает вертикальные линии "|" в меню при изменении разрешения экрана */
+ul.nav li:not(:last-child):after {
+	content: '|';
+} 
+
+li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+@media screen and (max-width: 960px) {
+
+	/* первый блок с фоновым изображением */
+	#artcl1 {
+		background-attachment: scroll !important;
+	}	
+
+	.titles {
+		position: static !important;
+	}
+
+	ul.nav li:after {
+		display: none;
+	}	
+
+	ul.nav li:not(:last-child) {
+		border-top: 1px solid rgb(244,246,247);
+		border-bottom: 1px solid rgb(244,246,247);
+	}
+
+	ul.nav li {
+		padding-left: 15px;
+		transition: background-color 0.5s ease;
+	}
+
+	ul.nav li:hover {
+		background-color: rgb(244,246,247);
+	}
+	
+	ul.nav li a {
+		transition: color 0.5s ease
+	}
+
+	ul.nav li:hover a {
+		display: block;
+		color: #c12537;
+		width: 100%;
+	}
+
+	#contact-us {
+		visibility: hidden;
+	}
+
+	#back-to-top, #back-to-top.show {
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	
+	#info #container {
+		display: flex;
+		flex-direction: column;
+		justify-content: justify;
+		align-items: center;
+	}
+
+
+	#info #container div, #info #container div:first-child{
+		border-right: 0;
+		padding-left: 20px;
+		padding-right: 10px;
+	}
+
+
+	#info #container div img {
+		float: none;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	 }  
+
+	#footer, #footer div {
+	 	display: flex;
+	 	flex-direction: column;
+	 	align-items: center;
+	 	justify-content: space-between;
+	 }
+
+	#footer div i {
+	 	margin-bottom: 20px;
+	 }
+
+	footer {
+		height: 160px !important;
+	}
+
+	footer div.row {
+		line-height: 80px;
+	}
+
+}
+
+
+.top {
+    height: 48px;
+    background-color: rgb(244,246,247);
+}
+
+
+.h_underline {
+    width: 100px;
+    height: 25px;
+    border-bottom: 3px solid rgb(218, 5, 48);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* кнопка переключения на меню */
+nav.navbar button[type="button"] {
+	border: none;
+	font-size: 40px;
+	color: #c12537;
+}
+
+button[type="button"]:focus {
+	outline: 0;
+}
+
+
+
+/* пункты меню */
+li a {
+	color: rgb(161,161,161); /* оттенок серого */
+	font-size: 22px;
+}
+
+.active {
+	color: #c12537;
+}
+
+li a:hover {
+	text-decoration: none;
+	color: #c12537; /* оттенок бордового */
+}
+
+/* кнопка наверх */
+#back-to-top {
+    position: fixed;
+    bottom: 0px;
+    right: 75px;
+    z-index: 100000;
+    width: 48px;
+	height: 35px;
+    text-align: center;
+	line-height: 35px;
+	border-radius: 4px 4px 0 0;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-in-out 0s;
+    opacity: 0 !important;
+}
+#back-to-top:hover {
+    background: #747474;
+}
+#back-to-top.show {
+    opacity: 0.9 !important;
+}
+
+
+/* первый блок с фоновым изображением */
+#artcl1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 550px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../imgs/bg/2.jpg);
+	background-attachment: fixed;
+}	
+
+.titles {
+	max-width: 1650px;
+	position: fixed;
+}
+
+.anim {
+	animation-delay: 1s; 
+	animation-duration: 2s;
+}
+
+#artcl1 h1 {
+	color: white;
+	font-size: 80px;
+}
+
+#artcl1 h2{
+	font-size: 30px;
+	color: white;
+}
+
+/* Плашка с надписью "Contact us" */
+#contact-us {
+	z-index: 3;
+	float: right;
+	background: #c12537; /* оттенок бордового */
+	width: 120px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 0 0 20px 20px;
+	position: absolute;
+	right: 10px;
+	transition: background-color 0.3s ease;
+	color: white;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center; 
+	font-variant: small-caps;
+	font-size: 19px;
+}
+
+#contact-us:hover{
+	background-color: white;
+	color: black;
+}
+
+
+/* карусель */
+
+div.slider {
+	overflow: hidden; 
+} 
+
+div.slider div.slick-track {
+	display: flex !important;
+    align-items: center !important;
+}
+
+div.slider img {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+
+
+
+/* блок с иконками снизу */
+#icons {
+	background: url(../imgs/bg/congruent_outline.png) repeat 400px; 
+	position: relative;
+	background-size: content;
+}
+
+
+#icons figure img {
+	width: 100px;
+	border-radius: 200px;
+	border: 2px solid white;
+	transition: all 0.2s ease;
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 3px 1px white;
+}
+
+
+#icons figure a {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+}
+
+#icons img:hover {
+	background-color: white;
+	box-shadow: 0 0 10px 2px white;
+}
+
+#icons div figcaption {
+	color: white;
+	text-align: center;
+}
+
+/* блок перед футером */
+#container p {
+	text-align: justify;
+}
+
+#container h4{
+	text-align: center;
+}
+
+#info #container img {
+	float: left;
+	width: 200px;
+}
+
+.team p, #info p, p.copy {
+	color: #747474;
+}
+
+#info #container img {
+	margin-right: 5px;
+}
+
+#info #container div {
+	padding-top: 10px;
+}
+
+#container div:first-child {
+	border-right: 1px solid Gainsboro;
+	padding-left: 30px;
+}
+
+#info, #info #container {
+	width: 100%;
+} 
+
+
+/* подвал */
+#footer {
+	background-color: #c12537; /* оттенок бордового */
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+#footer h2 {
+	font-size: 30px;
+	color: white;
+}
+
+#footer div{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 30px;
+	color: white;
+}
+
+#footer i {
+	font-size: 24px;
+	justify-content: center;
+}
+
+div.mt-3 {
+	position: relative;
+}
+
+/* вторая карусель */
+
+div.slider_2 {
+	overflow: hidden;
+}
+
+div.slider_2 img {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+} 
+
+
+footer {
+	position: relative;
+	background-color: rgb(244,246,247);
+	height: 80px;
+	padding-top: 20px;
+}
+
+/* иконки соцсетей */
+div.media a {
+	color: DimGrey;
+	display: inline-flex;
+	margin-right: 5px;
+	font-size: 25px;
+}
+
+div.media a:hover{
+	color: DarkGrey;
+	text-decoration: none;
+}

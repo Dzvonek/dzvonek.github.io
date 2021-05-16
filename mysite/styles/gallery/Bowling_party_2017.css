@@ -1,0 +1,232 @@
+* {
+	font-family: Cuprum;
+}
+
+/* показывает и убирает вертикальные линии "|" в меню при изменении разрешения экрана */
+li:not(:last-child):after{
+	content: '|';
+} 
+
+li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+@media screen and (max-width: 960px) {
+	/* меню */
+	ul.nav li:after {
+		display: none;
+	}	
+
+	ul.nav li {
+		padding-left: 15px;
+		transition: background-color 0.5s ease;
+	}
+
+	ul.nav li a {
+		transition: color 0.5s ease
+	}
+
+	ul.nav li:hover {
+		width: 100%;
+		background-color: rgb(244,246,247);
+	}
+
+	ul.nav li:hover a {
+		text-decoration: none;
+		color: #c12537 !important;
+	}
+
+	#contact-us{
+		visibility: hidden;
+	}
+
+	#back-to-top, #back-to-top.show {
+		visibility: hidden;
+	}
+
+	footer {
+		height: 160px !important;
+	}
+
+	footer div.row {
+		line-height: 80px;
+	}
+}
+
+.top {
+    height: 48px;
+    background-color: rgb(244,246,247);
+}
+
+nav {
+    border-bottom: 1px solid rgb(244,246,247);
+}
+
+/* кнопка переключения на меню */
+nav.navbar button[type="button"]{
+	border: none;
+	font-size: 40px;
+	color: #c12537;
+}
+
+button[type="button"]:focus{
+	outline: 0;
+}
+
+
+/* ---- .grid-item ---- */
+   
+.grid {
+	max-width: 100%; 
+	margin: 0 auto;
+}
+  
+/* clearfix */
+.grid:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+  
+
+/* ---- grid-item ---- */
+  
+.grid-item {
+	width: 160px;
+	height: 180px;
+	float: left;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+  
+.grid-item--width2 { 
+	width: 335px !important;
+	height: 190px !important;
+	box-sizing: border-box; 
+}
+  
+.grid-item--height2 { 
+	height: 245px !important;
+	width: 160px !important; 
+	box-sizing: border-box;
+}
+
+.grid-item--height3 { 
+	height: 300px !important;
+	width: 160px !important; 
+	box-sizing: border-box;
+}
+
+.grid-item--height4 { 
+	height: 325px !important;
+	width: 160px !important; 
+	box-sizing: border-box;
+}
+
+div.grid-item img {
+    transition: all 0.3s ease;
+}
+
+div.grid-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 1px 20px 1px black;
+} 
+
+
+/* пункты меню */
+li a {
+	color: rgb(161,161,161); /* оттенок серого */
+	font-size: 22px;
+}
+
+#active{
+	color: #c12537;
+}
+
+li a:hover {
+	text-decoration: none;
+	color: #c12537; /* оттенок бордового */
+}
+
+ /* Плашка с надписью "Contact us" */
+ #contact-us {
+	z-index: 3;
+	float: right;
+	background: #c12537; /* оттенок бордового */
+	width: 120px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 0 0 20px 20px;
+	position: absolute;
+	right: 10px;
+	transition: background-color 0.3s ease;
+	color: white;
+	font-weight: bold;
+	padding-top: 4px;
+	text-align: center; 
+	font-variant: small-caps;
+	font-size: 19px;
+}
+
+#contact-us:hover{
+	background-color: white;
+	color: black;
+}
+
+
+ /* Плашка с надписью "Contact us" */
+ #contact-us{
+	float: right;
+	background: #c12537; /* оттенок бордового */
+	width: 120px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 0 0 20px 20px;
+	position: absolute;
+	right: 10px;
+	transition: background-color 0.3s ease;
+	color: white;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center; 
+	font-variant: small-caps;
+	font-size: 19px;
+}
+
+#contact-us:hover{
+	background-color: white;
+	color: black;
+}
+
+
+.header {
+    margin-top: 40px;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+footer {
+	background-color: rgb(244,246,247);
+	height: 80px;
+	padding-top: 20px;
+}
+
+/* иконки соцсетей */
+div.media a {
+	color: DimGrey;
+	display: inline-flex;
+	margin-right: 5px;
+	font-size: 25px;
+}
+
+div.media a:hover{
+	color: DarkGrey;
+	text-decoration: none;
+}
+
+p.copy {
+	color: #747474;
+}

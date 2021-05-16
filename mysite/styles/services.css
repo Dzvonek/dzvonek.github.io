@@ -1,0 +1,271 @@
+* {
+	font-family: Cuprum;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+
+/* показывает и убирает вертикальные линии "|" в меню при изменении разрешения экрана */
+li:not(:last-child):after{
+	content: '|';
+} 
+
+li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+@media screen and (max-width: 960px) {
+
+	/* первый блок с фоновым изображением */
+	#artcl1 {
+		background-attachment: scroll !important;
+	}	
+
+	.titles {
+		position: static !important;
+	}
+
+
+	ul.nav li:after {
+		display: none;
+	}	
+
+	ul.nav li:not(:last-child) {
+		border-top: 1px solid rgb(244,246,247);
+		border-bottom: 1px solid rgb(244,246,247);
+	}
+
+	ul.nav li{
+		padding-left: 15px;
+		transition: background-color 0.5s ease;
+	}
+
+	ul.nav li:hover {
+		width: 100%;
+		background-color: rgb(244,246,247);
+	}
+	
+	ul.nav li a {
+		transition: color 0.5s ease
+	}
+
+	ul.nav li:hover a {
+		display: block;
+		color: #c12537;
+		width: 100%;
+	}
+
+	#contact-us{
+		visibility: hidden;
+	}
+
+	.brand p {
+		text-align: center;
+	}
+
+	#back-to-top, #back-to-top.show {
+		visibility: hidden;
+	}
+
+	footer {
+		height: 160px !important;
+	}
+
+	footer div.row {
+		line-height: 80px;
+	}
+
+}
+
+/* кнопка переключения на меню */
+nav.navbar button[type="button"]{
+	border: none;
+	font-size: 40px;
+	color: #c12537;
+}
+
+button[type="button"]:focus {
+	outline: 0;
+}
+
+.anim {
+	animation-delay: 1s; 
+	animation-duration: 2s;
+}
+
+
+/* пункты меню */
+li a {
+	color: rgb(161,161,161); /* оттенок серого */
+	font-size: 22px;
+}
+
+img.card-img {
+	width: 130px;
+}
+
+.active {
+	color: #c12537;
+}
+
+li a:hover {
+	text-decoration: none;
+	color: #c12537; /* оттенок бордового */
+}
+
+
+
+/* первый блок с фоновым изображением */
+#artcl1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 550px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../imgs/bg/2.jpg);
+	background-attachment: fixed;
+}	
+
+.titles {
+	max-width: 1650px;
+	position: fixed;
+}
+
+#artcl1 h1 {
+	color: white;
+	font-size: 80px;
+}
+
+#artcl1 h2 {
+	font-size: 30px;
+	color: white;
+}	
+
+.services {
+	position: relative;
+}
+
+ /* Плашка с надписью "Contact us" */
+#contact-us {
+	z-index: 3;
+	float: right;
+	background: #c12537; /* оттенок бордового */
+	width: 120px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 0 0 20px 20px;
+	position: absolute;
+	right: 10px;
+	transition: background-color 0.3s ease;
+	color: white;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center; 
+	font-variant: small-caps;
+	font-size: 19px;
+}
+
+#contact-us:hover{
+	background-color: white;
+	color: black;
+}
+
+
+/* кнопка наверх */
+#back-to-top {
+    position: fixed;
+    bottom: 0px;
+    right: 75px;
+    z-index: 100000;
+    width: 48px;
+	height: 35px;
+    text-align: center;
+	line-height: 35px !important;
+	border-radius: 4px 4px 0 0;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-in-out 0s;
+    opacity: 0 !important;
+}
+#back-to-top:hover {
+    background: #747474;
+}
+#back-to-top.show {
+    opacity: 0.9 !important;
+}
+
+.top {
+    height: 50px;
+    background-color: rgb(244,246,247);
+}
+
+
+.h_underline {
+    width: 100px;
+    height: 25px;
+    border-bottom: 3px solid rgb(218, 5, 48);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.card-body p, p.copy {
+	color: #747474;
+}
+
+div h2 {
+    text-align: center;
+}
+
+div p {
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+}
+
+.header {
+    margin-top: 40px;
+}
+
+
+.container {
+    margin-top: 5%;
+}
+
+.card {
+    border: 0;
+}
+
+
+
+div p {
+    border-bottom: 0;
+}
+
+footer {
+	position: relative;
+	background-color: rgb(244,246,247);
+	height: 80px;
+	padding-top: 20px;
+}
+
+/* иконки соцсетей */
+div.media a {
+	color: DimGrey;
+	display: inline-flex;
+	margin-right: 5px;
+	font-size: 25px;
+}
+
+div.media a:hover{
+	color: DarkGrey;
+	text-decoration: none;
+}

@@ -1,0 +1,263 @@
+
+* {
+	font-family: Cuprum;
+}
+
+/* показывает и убирает вертикальные линии "|" в меню при изменении разрешения экрана */
+li:not(:last-child):after{
+	content: '|';
+} 
+
+li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+@media screen and (max-width: 960px) {
+
+	/* меню */
+	ul.nav li:after {
+		display: none;
+	}	
+
+	ul.nav li {
+		padding-left: 15px;
+		transition: background-color 0.5s ease;
+	}
+
+	ul.nav li a {
+		transition: color 0.5s ease
+	}
+
+	ul.nav li:hover {
+		width: 100%;
+		background-color: rgb(244,246,247);
+	}
+
+	ul.nav li:hover a {
+		text-decoration: none;
+		color: #c12537 !important;
+	}
+
+	
+
+	#contact-us{
+		visibility: hidden;
+    }
+    
+    #back-to-top, #back-to-top.show {
+		visibility: hidden;
+	}
+	
+	#button {
+		margin-left: 0 !important;
+	}
+    
+    footer {
+		height: 160px !important;
+	}
+
+	footer div.row {
+		line-height: 80px;
+	}
+}
+
+.header {
+    margin-top: 40px;
+}
+
+.top {
+    height: 50px;
+    background-color: rgb(244,246,247);
+}
+
+/* кнопка переключения на меню */
+nav.navbar button[type="button"]{
+	border: none;
+	font-size: 40px;
+	color: #c12537;
+}
+
+button[type="button"]:focus{
+	outline: 0;
+}
+
+/* пункты меню */
+li a{
+	color: rgb(161,161,161); /* оттенок серого */
+	font-size: 22px;
+}
+
+#active{
+	color: #c12537;
+}
+
+li a:hover{
+	text-decoration: none;
+	color: #c12537; /* оттенок бордового */
+}
+
+ /* Плашка с надписью "Contact us" */
+ #contact-us {
+	z-index: 3;
+	float: right;
+	background: #c12537; /* оттенок бордового */
+	width: 120px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 0 0 20px 20px;
+	position: absolute;
+	right: 10px;
+	transition: background-color 0.3s ease;
+	color: white;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center; 
+	font-variant: small-caps;
+	font-size: 19px;
+}
+
+#contact-us:hover{
+	background-color: white;
+	color: black;
+}
+
+/* кнопка наверх */
+#back-to-top {
+    position: fixed;
+    bottom: 0px;
+    right: 75px;
+    z-index: 100000;
+    width: 48px;
+	height: 35px;
+    text-align: center;
+	line-height: 35px !important;
+	border-radius: 4px 4px 0 0;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-in-out 0s;
+    opacity: 0 !important;
+}
+#back-to-top:hover {
+    background: #747474;
+}
+#back-to-top.show {
+    opacity: 0.9 !important;
+}
+
+div.slider {
+    outline: none;
+    border: none;
+}
+
+div.slider div {  
+    outline: none;
+    border: none;
+}
+
+div img {
+    width: 100%;
+}
+
+div.container p {
+	font-size: 21px;
+}
+
+div.entry-title {
+    background-color:#e8e8e8;
+    height: 150px;
+}
+
+h1.entry-title {
+    font-family: Cuprum;
+    font-style: italic;
+    font-weight: 400;
+    color: #373737;
+    font-weight: 400;
+    text-align: center;
+    font-size: 50px;
+    outline: 0 !important;
+	vertical-align: middle !important;
+	line-height: 150px;
+}
+
+p, p.copy {
+	color: #747474;
+}
+
+/* нижний блок перед футером */
+
+div.leader {
+	max-width: 1250px;
+}
+
+div.bot {
+	background-color: #e8e8e8;
+}
+
+.bottom {
+	padding-left: 10px !important;
+    border-left: 7px solid #c12537;
+	color: #373737;
+}
+
+.bottom:hover {
+    outline: 0 !important;
+}
+
+.bottom h1 {
+	font-size: 76px;
+}
+
+.bottom h2 {
+	font-size: 40px;
+}
+
+
+#button {
+	font-family: Roboto, sans-serif;;
+	display: block;
+    background-image: linear-gradient( to top, #939393, #bababa );
+    font-weight: bold;
+    color: black;
+    border: none;
+    outline: none !important;
+    width: 186px;
+    height: 48px;
+    text-align: center;
+    border-radius: 2px;
+	transition: all 0.3s;
+	line-height: 48px;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#button:hover {
+    background-image: none;
+    background-color: #bf102f;
+    color: white;
+    text-decoration: none !important;
+}
+
+
+footer {
+	background-color: rgb(244,246,247);
+	height: 80px;
+	padding-top: 20px;
+}
+
+/* иконки соцсетей */
+div.media a {
+	color: DimGrey;
+	display: inline-flex;
+	margin-right: 5px;
+	font-size: 25px;
+}
+
+div.media a:hover{
+	color: DarkGrey;
+	text-decoration: none;
+}

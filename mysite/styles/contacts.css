@@ -1,0 +1,342 @@
+* {
+	font-family: Cuprum;
+}
+
+/* показывает и убирает вертикальные линии "|" в меню при изменении разрешения экрана */
+li:not(:last-child):after{
+	content: '|';
+} 
+
+li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+@media screen and (max-width: 960px) {
+	ul.nav li:after {
+		display: none;
+	}	
+
+	ul.nav li:not(:last-child) {
+		border-top: 1px solid rgb(244,246,247);
+		border-bottom: 1px solid rgb(244,246,247);
+	}
+
+	ul.nav li{
+		padding-left: 15px;
+		transition: background-color 0.5s ease;
+	}
+
+	ul.nav li:hover {
+		width: 100%;
+		background-color: rgb(244,246,247);
+	}
+	
+	ul.nav li a {
+		transition: color 0.5s ease
+	}
+
+	ul.nav li:hover a {
+		display: block;
+		color: #c12537;
+		width: 100%;
+	}
+
+	#contact-us{
+		visibility: hidden;
+	}
+
+	#back-to-top, #back-to-top.show {
+		visibility: hidden;
+	}
+
+	div.contacts div {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	div.contacts div.pulse {
+		justify-content: center;
+	}
+
+	/* пульсирующий невидимый элемент */
+	div.pulse div {
+		top: 100%;
+		right: 36%;
+	}
+
+	footer {
+		height: 160px !important;
+	}
+
+	footer div.row {
+		line-height: 80px;
+	}
+
+}
+
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.top {
+    height: 50px;
+    background-color: rgb(244,246,247);
+}
+
+.contacts {
+	padding-top: 50px;
+}
+
+
+#wrap {
+	width: 100%;
+	background-color: rgb(244,246,247);
+}
+
+/* кнопка переключения на меню */
+nav.navbar button[type="button"]{
+	border: none;
+	font-size: 40px;
+	color: #c12537;
+}
+
+button[type="button"]:focus {
+	outline: 0;
+}
+
+input.form-control {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    background-color: rgb(244,246,247);
+}
+
+/* пункты меню */
+li a {
+	color: rgb(161,161,161); /* оттенок серого */
+	font-size: 22px;
+}
+
+.active {
+	color: #c12537;
+}
+
+li a:hover {
+	text-decoration: none;
+	color: #c12537; /* оттенок бордового */
+}
+
+ /* Плашка с надписью "Contact us" */
+ #contact-us {
+	z-index: 3;
+	float: right;
+	background: #c12537; /* оттенок бордового */
+	width: 120px;
+	height: 40px;
+	border: 1px solid white;
+	border-radius: 0 0 20px 20px;
+	position: absolute;
+	right: 10px;
+	transition: background-color 0.3s ease;
+	color: white;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center; 
+	font-variant: small-caps;
+	font-size: 19px;
+}
+
+#contact-us:hover {
+	background-color: white;
+	color: black;
+}
+
+button[type="submit"] {
+    border: none !important;
+    width: 90px;
+    height: 40px;
+    color: white;
+    background-color: rgb(218, 5, 48);
+    transition: color 0.3s ease, background-color 0.3s ease;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+button[type="submit"]:hover{
+    color: black !important;
+    background-color: grey !important;
+}
+
+/* .anim {
+	animation-delay: .5s; 
+	animation-duration: 1.5s;
+} */
+
+
+textarea.form-control {
+	background-color: rgb(244,246,247) !important;
+	border: none;
+}
+
+/* поля ввода */
+input.form-control:focus, textarea.form-control:focus {
+	background-color: rgb(244,246,247);
+    outline: none;
+}
+
+textarea {
+    padding-top: 10px;
+    padding-left: 10px;
+    min-height: 150px;
+    width: 395px;
+    border: none;
+    background-color: rgb(244,246,247);
+}
+
+
+
+/* кнопка наверх */
+#back-to-top {
+    position: fixed;
+    bottom: 0px;
+    right: 75px;
+    z-index: 100000;
+    width: 48px;
+	height: 35px;
+    text-align: center;
+	line-height: 35px !important;
+	border-radius: 4px 4px 0 0;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-in-out 0s;
+    opacity: 0 !important;
+}
+#back-to-top:hover {
+    background: rgb(195, 195, 195);
+}
+#back-to-top.show {
+    opacity: 0.9 !important;
+}
+
+
+div.pulse {
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+div.pulse h3 {
+	transition: color 0.2s ease-in;
+}
+
+div.pulse i {
+	/* position: absolute; */
+    background-color: white !important;
+    border-radius: 100%;
+    width: 90px;
+	height: 90px;
+	box-shadow: 0 0 0 5px white;
+	border: 1px solid rgb(244,246,247);
+    font-size: 46px !important;
+    font-weight: bold !important;
+	transition: font-size 0.1s ease-in, background-color 0.1s ease-in;
+	line-height: 90px;
+	z-index: 1100;
+}
+
+/* подпись к картинке */
+div.pulse p {
+	font-size: 14px;
+}
+
+div.pulse:hover i {
+	background-color: #bf102f !important;
+	border: 1px solid white;
+	box-shadow: 0 0 0 7px #bf102f;
+	font-size: 40px !important;
+	line-height: 88px;
+}
+
+div.pulse:hover h3 {
+	color: #bf102f;
+}
+
+
+/* пульсирующий невидимый элемент */
+div.pulse::before {
+	content: '';
+	display: inline-block;
+	z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	border-radius: 100%;
+	width: 95px;
+	height: 95px;
+	margin-left: auto;
+	margin-right: auto;
+	visibility: hidden;
+}
+
+div.pulse:hover::before {
+	visibility: visible;
+	box-shadow: 0 0 10px 5px #bf102f;
+	animation: radial-pulse 1s ease-out;
+	animation-fill-mode: forwards !important;
+} 
+
+ 
+@keyframes radial-pulse {
+	0% {
+		transform: scale(1);
+		opacity: 0.0;
+	 }
+	 25% {
+		transform: scale(1);
+		opacity: 0.1;
+	 }
+	 50% {
+		transform: scale(1.1);
+		opacity: 0.3;
+	 }
+	 75% {
+		transform: scale(1.3);
+		opacity: 0.5;
+	 }
+	 100% {
+		transform: scale(1.5);
+		opacity: 0.0;
+	 }
+}
+
+
+footer {
+	background-color: rgb(244,246,247);
+	height: 80px;
+	padding-top: 20px;
+}
+
+/* иконки соцсетей */
+div.media a {
+	color: DimGrey;
+	display: inline-flex;
+	margin-right: 5px;
+	font-size: 25px;
+}
+
+div.media a:hover{
+	color: DarkGrey;
+	text-decoration: none;
+}
+
+p.copy {
+	color: #747474;
+}
+
